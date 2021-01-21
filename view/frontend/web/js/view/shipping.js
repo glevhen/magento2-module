@@ -194,7 +194,7 @@ define(
                     if (shippingAddressData) {
                         checkoutProvider.set(
                             'shippingAddress',
-                            $.extend({}, checkoutProvider.get('shippingAddress'), shippingAddressData)
+                            $.extend(true, {}, checkoutProvider.get('shippingAddress'), shippingAddressData)
                         );
                     }
                     checkoutProvider.on('shippingAddress', function (shippingAddressData) {
